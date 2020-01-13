@@ -1,5 +1,8 @@
 namespace: tool-box
 app_name: toolbox
+source_repository_url:
+source_repository_ref:
+ocp_version:
 
 openshift_cluster_content:
 - object: Environment Setup
@@ -18,6 +21,9 @@ openshift_cluster_content:
     template: "docker-build-template.yml"
     params_from_vars:
       NAME: "{{ app_name }}"
+      SOURCE_REPOSITORY_URL: "{{ source_repository_url }}"
+      SOURCE_REPOSITORY_REF: "{{ source_repository_ref }}"
+      OCP_VERSION: "{{ ocp_version }}"
       SOURCE_CONTEXT_DIR: tool-box
     namespace: "{{ namespace }}"
     tags:
