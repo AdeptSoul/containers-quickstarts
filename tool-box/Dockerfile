@@ -2,7 +2,6 @@ FROM registry.access.redhat.com/ubi8
 
 MAINTAINER Aly Ibrahim<aly@redhat.com>
 
-ENV OC_CLIENT_MIRROR https://mirror.openshift.com/pub/openshift-v3/clients/3.11.127/linux/oc.tar.gz
 ENV HOME /home/tool-box
 
 RUN yum -y update && \
@@ -16,7 +15,7 @@ RUN curl -o jq -sL https://github.com/stedolan/jq/releases/download/jq-1.6/jq-li
 
 RUN mkdir -m 775 $HOME && \
     chmod 775 /etc/passwd && \ 
-    pip3 install git+https://github.com/ansible/ansible.git@stable-2.8
+    pip3 install git+https://github.com/ansible/ansible.git@stable-$TOOLBOX_ANSIBLE_VERSION
 
 RUN curl -s https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz | tar -xvz && \
     chmod u+x linux-amd64/helm && mv linux-amd64/helm /usr/local/bin/ && rm -rf linux-amd64 && \

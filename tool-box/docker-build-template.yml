@@ -42,8 +42,8 @@ objects:
         env:
           - name: "OC_CLIENT_MIRROR"
             value: "{{ "https://mirror.openshift.com/pub/openshift-v3/clients/3.11.127/linux/oc.tar.gz" if ( "$%.1f"|format(OCP_VERSION) < 4.1 ) else "https://mirror.openshift.com/pub/openshift-v4/clients/oc/" ~ OCP_VERSION ~ "/linux/oc.tar.gz" }}"
-          - name: "ANSIBLE_VERSION"
-            value: "{"3": "2.8", "4": "2.9"}[OCP_VERSION | int | string] | default("2.8")"
+          - name: "TOOLBOX_ANSIBLE_VERSION"
+            value: "{"3": "2.8", "4": "2.9"}[OCP_VERSION | int | string] | default("3")"
     triggers:
     - type: GitHub
       github:
