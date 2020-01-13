@@ -6,8 +6,8 @@ This container exists to help folks that can't install ansible, git or other nec
 
 ## What's in the box?
 
-- `oc` version 3.11.0-0.32.0
-- `ansible` v2.8 (stable from `pip`)
+- `oc` version that matches OCP_VERSION. Defaults to 3.11
+- `ansible` v2.8 for OCP_VERSION < 4.1, v2.9 otherwise (stable from `pip`)
 - `python` v3.6
 - `git`
 - `unzip`
