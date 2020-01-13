@@ -18,8 +18,6 @@ openshift_cluster_content:
     template: "docker-build-template.yml"
     params_from_vars:
       NAME: "{{ app_name }}"
-      SOURCE_REPOSITORY_URL: https://github.com/redhat-cop/containers-quickstarts.git
-      SOURCE_REPOSITORY_REF: v1.1
       SOURCE_CONTEXT_DIR: tool-box
     namespace: "{{ namespace }}"
     tags:
