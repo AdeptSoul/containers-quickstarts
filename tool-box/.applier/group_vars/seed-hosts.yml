@@ -1,9 +1,8 @@
----
-- namespace: "tool-box"
-- app_name: "toolbox"
-- source_repository_url:
-- source_repository_ref:
-- ocp_version:
+namespace: tool-box
+app_name: toolbox
+source_repository_url:
+source_repository_ref:
+ocp_version:
 
 openshift_cluster_content:
 - object: Environment Setup
