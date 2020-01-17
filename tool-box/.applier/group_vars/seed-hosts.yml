@@ -5,8 +5,7 @@
 - source_repository_ref:
 - ocp_version:
 
-- openshift_cluster_content:
-
+openshift_cluster_content:
 - object: Environment Setup
   content:
   - name: Create Projects
